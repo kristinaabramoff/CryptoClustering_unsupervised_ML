@@ -1,57 +1,56 @@
-# CryptoClustering
+# Cryptocurrency Market Clustering Using K-Means and Principal Component Analysis (PCA)
+
 
 ## Overview
-Welcome to the CryptoClustering project! This project delves into analyzing cryptocurrency price changes over 24-hour and 7-day periods using unsupervised learning techniques. Our main objective is to identify distinct groups within the cryptocurrency market by applying clustering algorithms like K-means. Additionally, we explore how data transformations such as Principal Component Analysis (PCA) impact clustering outcomes.
+The **CryptoClustering** project analyzes cryptocurrency price changes over 24-hour and 7-day periods using unsupervised learning techniques. The primary objective is to identify distinct groups within the cryptocurrency market by applying clustering algorithms like K-means. The project also explores how data transformations, such as Principal Component Analysis (PCA), affect clustering outcomes.
 
 ## Software and Tools Used
-Python: The primary programming language for data analysis and machine learning.
-Pandas: For data manipulation and analysis.
-Scikit-learn: Used for machine learning algorithms and data scaling.
-hvPlot: For data visualization.
-Jupyter Notebook: For interactive coding and analysis.
+- **Python**: The primary programming language for data analysis and machine learning.
+- **Pandas**: Used for data manipulation and analysis.
+- **Scikit-learn**: Utilized for machine learning algorithms and data scaling.
+- **hvPlot**: For interactive data visualization.
+- **Jupyter Notebook**: For interactive coding and analysis.
 
-#Getting Started
-## Repository Setup
-Create Repository: A new GitHub repository named CryptoClustering was created.
-Clone and Setup: Clone the repository to your local machine and set up the initial files.
-File Renaming: Rename the starter code file from Crypto_Clustering_starter_code.ipynb to Crypto_Clustering.ipynb.
+## Getting Started
 
-# Data Loading and Initial Analysis
-Data Import: Load the data from crypto_market_data.csv into a DataFrame.
-Explore Data: Perform initial data exploration to understand the dataset's structure and characteristics.
+### Repository Setup
+1. **Create Repository**: A new GitHub repository named `CryptoClustering` is created.
+2. **Clone and Setup**: The repository is cloned to the local machine, and initial files are set up.
+3. **File Renaming**: The starter code file, `Crypto_Clustering_starter_code.ipynb`, is renamed to `Crypto_Clustering.ipynb`.
+
+### Data Loading and Initial Analysis
+1. **Data Import**: The data from `crypto_market_data.csv` is loaded into a DataFrame.
+2. **Explore Data**: Initial data exploration is performed to understand the dataset's structure and characteristics.
 
 ## Data Preparation
-Standardization: Normalize the data using StandardScaler from Scikit-learn to ensure all features are on a similar scale, which is essential for accurate clustering.
-Scaled DataFrame: Create a new DataFrame with scaled data, keeping the "coin_id" from the original data as the index.
+1. **Standardization**: The data is normalized using `StandardScaler` from Scikit-learn to ensure all features are on a similar scale for accurate clustering.
+2. **Scaled DataFrame**: A new DataFrame with the scaled data is created, with the "coin_id" retained from the original data as the index.
 
 ## Finding the Optimal Number of Clusters (k)
-Using Original Scaled Data:
-Elbow Method: Identify the optimal number of clusters by:
-Generating potential k values ranging from 1 to 11.
-Calculating inertia for each k value.
-Plotting inertia to find the "elbow" point that indicates the best k.
+
+### Using Original Scaled Data
+1. **Elbow Method**: The optimal number of clusters is identified by:
+   - Generating potential k values ranging from 1 to 11.
+   - Calculating inertia for each k value.
+   - Plotting inertia values to find the "elbow" point that indicates the best k.
 
 ## Clustering with K-means (Original Scaled Data)
-Model Initialization: Initialize the K-means model with the optimal k value found using the elbow method.
-Model Fitting: Fit the K-means model to the scaled data.
-Cluster Prediction: Predict clusters and group cryptocurrencies accordingly.
-Data Visualization: Create a scatter plot using hvPlot with "price_change_percentage_24h" and "price_change_percentage_7d" on the x and y axes. Points are colored by predicted clusters, with "coin_id" included in the hover tooltip.
+1. **Model Initialization**: The K-means model is initialized with the optimal k value found using the elbow method.
+2. **Model Fitting**: The K-means model is fitted to the scaled data.
+3. **Cluster Prediction**: Clusters are predicted, grouping cryptocurrencies accordingly.
+4. **Data Visualization**: A scatter plot is created using hvPlot, with `price_change_percentage_24h` on the x-axis and `price_change_percentage_7d` on the y-axis. The data points are colored by predicted clusters, and "coin_id" is included in the hover tooltip.
 
 ## Optimizing Clusters with Principal Component Analysis (PCA)
-PCA Transformation: Apply PCA to reduce the dataset to three principal components.
-Explained Variance: Analyze the explained variance to understand the information retained by the principal components.
+1. **PCA Transformation**: PCA is applied to reduce the dataset to three principal components.
+2. **Explained Variance**: The explained variance is analyzed to understand the information retained by the principal components.
 
 ## Using PCA Data for Clustering
-New DataFrame: Create a new DataFrame with PCA-transformed data, using "coin_id" as the index.
-Elbow Method (PCA Data): Apply the elbow method to find the optimal k value using the PCA data.
-K-means Clustering (PCA Data):
-Initialize and fit the K-means model using PCA data.
-Store predicted clusters in a new column.
-Generate a scatter plot with hvPlot, using "PC1" and "PC2" as axes and coloring by K-means labels. "coin_id" is included in the hover tooltip.
-
+1. **New DataFrame**: A new DataFrame with PCA-transformed data is created, using "coin_id" as the index.
+2. **Elbow Method (PCA Data)**: The elbow method is applied to find the optimal k value using the PCA data.
+3. **K-means Clustering (PCA Data)**: The K-means model is initialized and fitted using PCA data. The predicted clusters are stored in a new column.
+4. **Data Visualization**: A scatter plot is generated using hvPlot, with "PC1" and "PC2" on the axes, and the data points colored by the K-means labels. "coin_id" is included in the hover tooltip.
 
 ## Analysis and Conclusion
-The project concludes with an evaluation of how reducing features using PCA affects clustering performance. The results suggest that PCA can lead to more distinct clusters, highlighting the benefits of dimensionality reduction in clustering tasks.
+The project concludes with an evaluation of how reducing features using PCA impacts clustering performance. The results suggest that PCA can lead to more distinct clusters, highlighting the advantages of dimensionality reduction in clustering tasks.
 
-For the full analysis, code, and visualizations, please refer to the CryptoClustering.ipynb notebook in the project repository.
-
+For the full analysis, code, and visualizations, please refer to the `CryptoClustering.ipynb` notebook in the project repository.
