@@ -50,6 +50,16 @@ The **CryptoClustering** project analyzes cryptocurrency price changes over 24-h
 3. **K-means Clustering (PCA Data)**: The K-means model is initialized and fitted using PCA data. The predicted clusters are stored in a new column.
 4. **Data Visualization**: A scatter plot is generated using hvPlot, with "PC1" and "PC2" on the axes, and the data points colored by the K-means labels. "coin_id" is included in the hover tooltip.
 
+## Example output
+
+**Elbowcurve**
+
+/Users/abramoff/Desktop/Data science/CryptoClustering/output/elbowcurve.png
+
+**Cluster Plot**
+/Users/abramoff/Desktop/Data science/CryptoClustering/output/clustering_plot.png
+
+
 ## Analysis and Conclusion
 The project concludes with an evaluation of how reducing features using PCA impacts clustering performance. The results suggest that PCA can lead to more distinct clusters, highlighting the advantages of dimensionality reduction in clustering tasks.
 
