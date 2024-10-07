@@ -53,11 +53,12 @@ The **CryptoClustering** project analyzes cryptocurrency price changes over 24-h
 ## Example output
 
 **Elbowcurve**
+![elbowcurve](https://github.com/user-attachments/assets/ef837e45-566f-4b62-9bc3-fcf6b9fb5c3b)
 
-/Users/abramoff/Desktop/Data science/CryptoClustering/output/elbowcurve.png
 
 **Cluster Plot**
-/Users/abramoff/Desktop/Data science/CryptoClustering/output/clustering_plot.png
+![clustering_plot](https://github.com/user-attachments/assets/3e4c8608-79a5-4212-a263-495dea208fa0)
+
 
 
 ## Analysis and Conclusion
