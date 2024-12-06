@@ -52,12 +52,19 @@ The **CryptoClustering** project analyzes cryptocurrency price changes over 24-h
 
 ## Example output
 
+**DataFrame**
+![Screenshot 2024-12-06 at 11 00 12 am](https://github.com/user-attachments/assets/d9c9f5fd-bf66-491e-82d3-c8af974f50cb)
+
+
+
 **Elbowcurve**
 ![elbowcurve](https://github.com/user-attachments/assets/ef837e45-566f-4b62-9bc3-fcf6b9fb5c3b)
 
 
 **Cluster Plot**
 ![clustering_plot](https://github.com/user-attachments/assets/3e4c8608-79a5-4212-a263-495dea208fa0)
+
+![Screenshot 2024-12-06 at 10 59 13 am](https://github.com/user-attachments/assets/39328a56-cd7e-4339-b777-fa6545930f8d)
 
 
 
